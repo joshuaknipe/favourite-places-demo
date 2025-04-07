@@ -10,6 +10,10 @@ function PlaceDetails({ route, navigation }) {
 
   function showOnMapHandler() {
     console.log("show on map");
+    navigation.navigate('Map', {
+      initialLat: fetchedPlace.location.lat,
+      initialLng: fetchedPlace.location.lng,
+    });
   }
 
   const selectedPlaceID = route.params.placeId;
